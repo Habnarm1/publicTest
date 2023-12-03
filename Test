@@ -1,1 +1,61 @@
 
+import 'package:flutter/material.dart';
+
+class Homescreen extends StatelessWidget {
+  const Homescreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      // appBar: AppBar(
+      //   backgroundColor: Colors.blue,
+      //   elevation: 2,
+      //   automaticallyImplyLeading: false,
+      //   title: const Center(
+      //       child: Text(
+      //     'Hello App UI: Home Screen',
+      //     style: TextStyle(
+      //         color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
+      //   )),
+      // ),
+      body: SafeArea(
+        bottom: false,
+        child: Stack(
+          children: [
+            Container(
+              height: double.infinity,
+              margin: EdgeInsets.only(top: size.height * 0.25),
+              color: Colors.white,
+            ),
+            Column(
+              children: [
+                _HeaderSection()
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+class _HeaderSection extends StatelessWidget {
+  const _HeaderSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            CircleAvatar(
+              radius: 26.0,
+              backgroundImage:,
+            )
+          ],
+        )
+      ],
+    );
+  }
+}
